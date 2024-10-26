@@ -3,7 +3,7 @@
 ## Overview
 A modern, responsive website for a luxury car and truck dealership, featuring Mercedes and Volvo vehicles. The website provides an intuitive interface for browsing vehicles, with advanced filtering capabilities and a sleek, professional design.
 
-![Website Preview](path-to-screenshot.jpg)
+![Website Preview](site.png)
 
 ## Features
 
