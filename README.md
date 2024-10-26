@@ -42,11 +42,13 @@ A modern, responsive website for a luxury car and truck dealership, featuring Me
 ## Color Scheme
 css
 :root {
+
 --primary-dark: #1A237E;    /* Deep Blue /
 --primary: #3F51B5;         / Modern Indigo /
 --accent: #FF4081;          / Pink Accent /
 --background: #FAFAFA;      / Off-White Background /
 --surface: #FFFFFF;         / Pure White */
+
 }
 
 

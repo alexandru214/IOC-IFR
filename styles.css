@@ -71,9 +71,12 @@
 }
 
 .card-title {
-    color: var(--primary-dark);
+    color: var(--primary-light);
 }
 
+.card-text {
+    color: var(--primary-light);
+}
 /* Buttons Update */
 .btn-primary {
     background: var(--primary);
