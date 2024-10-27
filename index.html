@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your premier destination for cars and trucks">
+    <meta name="keywords" content="cars, trucks, dealership, vehicles, auto sales">
+    <link rel="canonical" href="https://yourwebsite.com">
+    <title>Cars</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Cars & Trucks</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+                <!-- Search Form -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero text-white text-center py-5"
+        style="background-image: url('car-truck-bg.jpg'); background-size: cover;">
+        <div class="container">
+            <h1>Welcome to the Cars & Trucks Hub</h1>
+            <p>Your go-to source for everything about vehicles on the road.</p>
+        </div>
+    </section>
+
+    <!-- Filter System -->
+    <section class="filters-section py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <!-- Filters Sidebar -->
+                <div class="col-md-3">
+                    <div class="filter-container">
+                        <!-- Price Range Filter -->
+                        <div class="filter-section">    
+                            <h3>Price Range</h3>
+                            <div class="price-slider">
+                                <input type="range" id="price-min" min="0" max="1000000" step="1000" class="form-range">
+                                <input type="range" id="price-max" min="0" max="1000000" step="1000" class="form-range">
+                                <div class="price-inputs mt-2">
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" id="price-min-input" class="form-control"
+                                            placeholder="Min">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" id="price-max-input" class="form-control"
+                                            placeholder="Max">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vehicle Type Filter -->
+                        <div class="filter-section mt-3">
+                            <h3>Vehicle Type</h3>
+                            <div class="checkbox-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="sedan" id="type-sedan">
+                                    <label class="form-check-label" for="type-sedan">Sedan</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="suv" id="type-suv">
+                                    <label class="form-check-label" for="type-suv">SUV</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="truck" id="type-truck">
+                                    <label class="form-check-label" for="type-truck">Truck</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Brand Filter -->
+                        <div class="filter-section mt-3">
+                            <h3>Brand</h3>
+                            <select id="brand-select" class="form-select" multiple>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="volvo">Volvo</option>
+                                <option value="tesla">Tesla</option>
+                            </select>
+                        </div>
+
+                        <!-- Filter Actions -->
+                        <div class="filter-actions mt-3">
+                            <button id="apply-filters" class="btn btn-primary w-100 mb-2">Apply Filters</button>
+                            <button id="reset-filters" class="btn btn-outline-secondary w-100">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Grid -->
+                <div class="col-md-9">
+                    <div id="vehicles-grid" class="row">
+                        <!-- Cars Section -->
+                        <section id="cars" class="py-5">
+                            <div class="container">
+                                <h2 class="text-center mb-4">Cars</h2>
+                                <div class="row">
+                                    <div class="col-md-4 vehicle-card" data-brand="Mercedes" data-type="sedan">
+                                        <div class="card">
+                                            <img src="https://autovista24.autovistagroup.com/wp-content/uploads/sites/5/2022/05/d662614-1024x640.jpg"
+                                                loading="lazy" class="card-img-top" alt="Car 1">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Mercedes S Klass 500 Sedan</h5>
+                                                <p class="card-text">Mercedes S Klass. A stylish and powerful vehicle
+                                                    for long trips.</p>
+                                                <p class="price">\$100500</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 vehicle-card" data-brand="Mercedes" data-type="suv">
+                                        <div class="card">
+                                            <img src="https://oasislimo.b-cdn.net/wp-content/uploads/2021/08/mercedes-g-wagon-blue-banner.jpg"
+                                                loading="lazy" class="card-img-top" alt="Car 2">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Mercedes G wagon Brabus</h5>
+                                                <p class="card-text">This car offers luxury and comfort for those long
+                                                    trips and joy on offroad.</p>
+                                                <p class="price">\$240000</p>
+                                                <label for="SUV"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 vehicle-card" data-brand="Mercedes" data-type="sedan">
+                                        <div class="card">
+                                            <img src="https://img.classistatic.de/api/v1/mo-prod/images/26/263640db-c51e-49ac-8937-aa8f5b6487f1?rule=mo-640.jpg"
+                                                loading="lazy" class="card-img-top" alt="Car 3">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Mercedes SLR</h5>
+                                                <p class="card-text">Compact, efficient, and reliable. Ideal for daily
+                                                    use if you have the money.</p>
+                                                <p class="price">\$300000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 vehicle-card" data-brand="Volvo" data-type="truck">
+                                        <div class="card">
+                                            <img src="https://www.cargo-partner.com/fileadmin/_processed_/e/2/csm_2880x1920-vera-gallery2_38b642904f.jpg"
+                                                loading="lazy" class="card-img-top" alt="Car 1">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Volvo Cargo Partner </h5>
+                                                <p class="card-text">Autonomus Self driving Cargo truck for shipyard
+                                                    use.</p>
+                                                <p class="price">\$450000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 vehicle-card" data-brand="Volvo" data-type="truck">
+                                        <div class="card">
+                                            <img src="https://imgr1.auto-motor-und-sport.de/Volvo-Super-Truck-2-jsonLd1x1-6eefd20c-2044516.jpg"
+                                                loading="lazy" class="card-img-top" alt="Car 2">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Volvo Super Truck Electric</h5>
+                                                <p class="card-text">This truck perfect for urban jorneys and no
+                                                    emmision.</p>
+                                                <p class="price">\$800000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 vehicle-card" data-brand="Volvo" data-type="suv">
+                                        <div class="card">
+                                            <img src="https://www.avus-automobile.com/wp-content/uploads/2023/02/xc60_black_edition.jpg"
+                                                loading="lazy" class="card-img-top" alt="Car 3">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Volvo XC60 Black Edition</h5>
+                                                <p class="card-text">Compact, efficient, and reliable. Ideal for daily
+                                                    use.</p>
+                                                <p class="price">\$75000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 vehicle-card" data-brand="Tesla" data-type="sedan">
+                                        <div class="card">
+                                            <img src="https://i.insider.com/6494700c1465b60019989fe9?width=700"
+                                                loading="lazy" class="card-img-top" alt="Car 3">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Tesla Model S</h5>
+                                                <p class="card-text">Compact, electric,sporty and reliable. Ideal for
+                                                    track or daily use</p>
+                                                <p class="price">\$99500</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 vehicle-card" data-brand="Tesla" data-type="sedan">
+                                        <div class="card">
+                                            <img src="https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_580,q_75,w_906/eghq9ct3evxunl27bkhl.jpg"
+                                                loading="lazy" class="card-img-top" alt="Car 3">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Tesla Model 3</h5>
+                                                <p class="card-text">Compact, electric and reliable. Ideal for
+                                                    track or daily use</p>
+                                                <p class="price">\$49000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 vehicle-card" data-brand="Tesla" data-type="sedan">
+                                        <div class="card">
+                                            <img src="https://hips.hearstapps.com/hmg-prod/images/2020-tesla-model-x-123-656e3825810bc.jpg?crop=0.479xw:0.433xh;0.261xw,0.297xh&resize=1200:*"
+                                                loading="lazy" class="card-img-top" alt="Car 3">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Tesla X</h5>
+                                                <p class="card-text">Powerfull, electric,sporty and reliable. Ideal for
+                                                    track or daily use</p>
+                                                <p class="price">\$135000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Video Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Tesla Model S 1020hp</h2>
+            <div class="ratio ratio-16x9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8mnMrfE2TPo?si=DwDKaLWDR0XEz1oX"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" title="Car Review"
+                allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white text-center bg-dark py-3">
+        <p>&copy; 2024 Cars & Trucks. All rights reserved.</p>
+        <p>By providing your email address, you agree that Cars & Trucks.com may send emails to you related to the Site
+            and/or the Services.</p>
+    </footer>
+    <script>
+        // Initialize filter system
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterSystem = new VehicleFilterSystem();
+        });
+
+        class VehicleFilterSystem {
+            constructor() {
+                this.vehicles = Array.from(document.querySelectorAll('.vehicle-card')).map(card => ({
+                    element: card,
+                    price: this.extractPrice(card),
+                    type: card.getAttribute('data-type'),  // Use data-type attribute
+                    brand: this.extractBrand(card)
+                }));
+
+                this.initializeFilters();
+                this.attachEventListeners();
+            }
+
+            extractPrice(card) {
+                const priceText = card.textContent.match(/\$[\d,]+/);
+                return priceText ? parseInt(priceText[0].replace(/[$,]/g, '')) : 0;
+            }
+
+            extractBrand(card) {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                if (title.includes('mercedes')) return 'mercedes';
+                if (title.includes('volvo')) return 'volvo';
+                if (title.includes('tesla')) return 'tesla';
+                return 'other';
+            }
+
+            initializeFilters() {
+                document.getElementById('price-min').value = 0;
+                document.getElementById('price-max').value = 1000000;
+                document.getElementById('price-min-input').value = 0;
+                document.getElementById('price-max-input').value = 1000000;
+            }
+
+            attachEventListeners() {
+                document.getElementById('price-min').addEventListener('input', (e) => {
+                    document.getElementById('price-min-input').value = e.target.value;
+                });
+
+                document.getElementById('price-max').addEventListener('input', (e) => {
+                    document.getElementById('price-max-input').value = e.target.value;
+                });
+
+                document.getElementById('apply-filters').addEventListener('click', () => {
+                    this.applyFilters();
+                });
+
+                document.getElementById('reset-filters').addEventListener('click', () => {
+                    this.resetFilters();
+                });
+            }
+
+            applyFilters() {
+                const minPrice = parseInt(document.getElementById('price-min').value);
+                const maxPrice = parseInt(document.getElementById('price-max').value);
+                const selectedTypes = Array.from(document.querySelectorAll('.checkbox-group input:checked')).map(cb => cb.value);
+                const selectedBrands = Array.from(document.getElementById('brand-select').selectedOptions).map(opt => opt.value);
+
+                this.vehicles.forEach(vehicle => {
+                    const priceMatch = vehicle.price >= minPrice && vehicle.price <= maxPrice;
+                    const typeMatch = selectedTypes.length === 0 || selectedTypes.includes(vehicle.type);
+                    const brandMatch = selectedBrands.length === 0 || selectedBrands.includes(vehicle.brand);
+
+                    vehicle.element.style.display = (priceMatch && typeMatch && brandMatch) ? '' : 'none';
+                });
+            }
+
+            resetFilters() {
+                document.getElementById('price-min').value = 0;
+                document.getElementById('price-max').value = 1000000;
+                document.getElementById('price-min-input').value = 0;
+                document.getElementById('price-max-input').value = 1000000;
+
+                document.querySelectorAll('.checkbox-group input').forEach(cb => cb.checked = false);
+                document.getElementById('brand-select').selectedIndex = -1;
+
+                this.vehicles.forEach(vehicle => {
+                    vehicle.element.style.display = '';
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

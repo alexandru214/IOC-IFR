@@ -55,17 +55,9 @@ css
 ## Project Structure
 luxury-dealership/
 ├── index.html
-├── cars.html
 ├── trucks.html
 ├── contact.html
-├── css/
-│   ├── styles.css
-│   └── responsive.css
-├── js/
-│   └── filter.js
-└── images/
-├── cars/
-└── trucks/
+├── styles.css
 
 
 ## Setup and Installation
@@ -104,7 +96,8 @@ git clone https://github.com/yourusername/luxury-dealership.git
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Authors
-- Your Name (@yourusername)
+- Alexandru Berariu
+- Andrei Apostol
 
 ## Acknowledgments
 - Images sourced from authorized dealers
