@@ -1,23 +1,16 @@
 :root {
-    /* Primary Colors */
-    --primary-dark: #4e59cf;    /* Deep Blue */
-    --primary: #1f29b2;         /* Modern Indigo */
-    --primary-light: #7986CB;   /* Light Indigo */
+    --primary-dark: #4e59cf;    
+    --primary: #1f29b2;         
+    --primary-light: #7986CB;   
     
-    /* Accent Colors */
-    --accent: #FF4081;          /* Pink Accent */
-    --accent-light: #FF80AB;    /* Light Pink */
+    --accent: #FF4081;          
+    --accent-light: #FF80AB;    
     
-    /* Neutral Colors */
-    --background: #FAFAFA;      /* Off-White Background */
-    --surface: #FFFFFF;         /* Pure White */
-    --text-primary: #212121;    /* Dark Text */
-    --text-secondary: #757575;  /* Grey Text */
-    
-    /* Status Colors */
-    --success: #00BFA5;         /* Teal */
-    --warning: #FFC107;         /* Amber */
-    --error: #FF5252;           /* Red */
+   
+    --background: #FAFAFA;      
+    --surface: #FFFFFF;         
+    --text-primary: #212121;  
+    --text-secondary: #757575;           
 }
 
 /* Navbar Update */
@@ -52,11 +45,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('path-to-subtle-pattern.png');
     opacity: 0.1;
 }
 
-/* Cards Update */
+
 .card {
     background: var(--surface);
     border: none;
@@ -72,11 +64,13 @@
 
 .card-title {
     color: var(--primary-light);
+    height: 50px;
 }
 
 .card-text {
     color: var(--primary-light);
 }
+
 /* Buttons Update */
 .btn-primary {
     background: var(--primary);
@@ -92,7 +86,6 @@
     box-shadow: 0 4px 12px rgba(63, 81, 181, 0.2);
 }
 
-/* Background Patterns */
 body {
     background-color: var(--background);
     background-image: 
@@ -105,7 +98,13 @@ body {
     background-attachment: fixed;
 }
 
-/* Section Headers */
+h1 {
+    color: var(--primary-dark);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
 h2 {
     color: var(--primary-dark);
     font-weight: 600;
@@ -125,7 +124,6 @@ h2::after {
     border-radius: 2px;
 }
 
-/* Search Bar Update */
 .form-control {
     border-radius: 8px;
     border: 1px solid rgba(0,0,0,0.1);
@@ -149,33 +147,15 @@ h2::after {
     transform: scale(1.05);
 }
 
-/* Price Tag */
-.price-tag {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background: var(--accent);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: 600;
-}
+
 
 footer {
-    background: linear-gradient(to right, var(--primary-dark), var(--primary));
-    color: white;
+    background: var(--surface);    
+    color: var(--text-primary);    
     padding: 40px 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1); 
 }
 
-footer a {
-    color: var(--accent-light);
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: white;
-    text-decoration: none;
-}
 
 /* Glass Morphism Effect */
 .glass-card {
@@ -185,7 +165,6 @@ footer a:hover {
     border-radius: 16px;
 }
 
-/* Subtle Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -194,6 +173,12 @@ footer a:hover {
 .card {
     animation: fadeIn 0.5s ease forwards;
 }
+
+
+.form-label {
+    color: var(--primary-dark); 
+}
+
 
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
